@@ -1,7 +1,7 @@
 {
   "baseBranch": "main",
   "extends": [
-    "config:base",
+    "config:recommended",
     "group:allApollographql",
     "group:fortawesome",
     "group:fusionjs",
@@ -44,7 +44,7 @@
     "regexManagers:dockerfileVersions"
   ],
   "masterIssue": true,
-  "enabledManagers": ["maven", "npm", "circleci", "dockerfile", "gradle", "gradle-wrapper", "helm-values"],
+
   "commitMessageExtra" : "from v{{currentVersion}} to {{#if isMajor}}v{{{newMajor}}}{{else}}{{#if isSingleVersion}}v{{{toVersion}}}{{else}}{{{newValue}}}{{/if}}{{/if}}",
   "major": {
     "automerge": false
@@ -67,6 +67,11 @@
     
   ],
   "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchCurrentVersion": "!/^0/",
+      "automerge": true
+    },
     {
       "matchDatasources": [
         "maven"
