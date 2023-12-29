@@ -1,7 +1,7 @@
 {
   "baseBranch": "main",
   "extends": [
-    "config:base",
+    "config:recommended",
     "group:allApollographql",
     "group:fortawesome",
     "group:fusionjs",
