@@ -103,7 +103,7 @@
     {
       "matchPackageNames": ["org.sonatype.plugins:nexus-staging-maven-plugin"],
       "enabled": false
-    },
+    }
    
   ],
   "helm-values": {
