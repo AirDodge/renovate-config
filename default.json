@@ -44,8 +44,7 @@
     "regexManagers:dockerfileVersions"
   ],
   "masterIssue": true,
-
-  "commitMessageExtra" : "from v{{currentVersion}} to {{#if isMajor}}v{{{newMajor}}}{{else}}{{#if isSingleVersion}}v{{{toVersion}}}{{else}}{{{newValue}}}{{/if}}{{/if}}",
+  "commitMessageExtra": "from v{{currentVersion}} to {{#if isMajor}}v{{{newMajor}}}{{else}}{{#if isSingleVersion}}v{{{toVersion}}}{{else}}{{{newValue}}}{{/if}}{{/if}}",
   "major": {
     "automerge": false
   },
@@ -65,23 +64,47 @@
   "prHourlyLimit": 10,
   "hostRules": [
     {
-      "hostType": "maven",
+      "matchHost": "europe-west1-docker.pkg.dev",
+      "username": "_json_key_base64",
+      "encrypted": {
+        "password": "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"
+      }
+    },
+    {
       "matchHost": "europe-west1-maven.pkg.dev",
       "username": "_json_key_base64",
       "encrypted": {
         "password": "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"
-      }}
-    
+      }
+    },
+    {
+      "matchHost": "europe-west1-npm.pkg.dev",
+      "username": "_json_key_base64",
+      "encrypted": {
+        "password": "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"
+      }
+    }
+
   ],
   "packageRules": [
     {
-      "matchUpdateTypes": ["minor", "patch"],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
       "matchCurrentVersion": "!/^0/",
       "automerge": true
     },
     {
-      "matchManagers": ["maven"], 
-      "registryUrls": ["https://europe-west1-maven.pkg.dev/airdodge-build/maven-release-repository"] },
+      "matchManagers": [
+        "maven",
+        "gradle"
+      ],
+      "registryUrls": [
+        "https://europe-west1-maven.pkg.dev/airdodge-build/maven-release-repository",
+        "https://europe-west1-maven.pkg.dev/airdodge-build/maven-snapshot-repository"
+      ]
+    },
     {
       "matchDatasources": [
         "maven"
@@ -91,37 +114,43 @@
         "https://plugins.gradle.org/m2/",
         "https://maven.google.com/",
         "https://jitpack.io",
-     
         "https://repo.osgeo.org/"
-      
       ]
     },
     {
       "groupName": "AirDodge packages",
-      "matchPackagePatterns": ["^@airdodge-private/"],
+      "matchPackagePatterns": [
+        "^@airdodge-private/"
+      ],
       "managers": [
         "npm"
       ]
     },
     {
-      "packagePatterns": ["^io.airdodge"],
+      "packagePatterns": [
+        "^io.airdodge"
+      ],
       "managers": [
         "maven",
         "gradle",
         "gradle-wrapper"
       ],
       "registryUrls": [
-       "https://europe-west1-maven.pkg.dev/airdodge-build/maven-release-repository"
+        "https://europe-west1-maven.pkg.dev/airdodge-build/maven-release-repository",
+        "https://europe-west1-maven.pkg.dev/airdodge-build/maven-snapshot-repository"
       ]
     },
-    
     {
-      "matchPackageNames": ["org.sonatype.plugins:nexus-staging-maven-plugin"],
+      "matchPackageNames": [
+        "org.sonatype.plugins:nexus-staging-maven-plugin"
+      ],
       "enabled": false
     }
-   
   ],
+  "npmrc": "@airdodge-private:registry=https://europe-west1-npm.pkg.dev/airdodge-build/npm-repository/\n//europe-west1-npm.pkg.dev/airdodge-build/npm-repository/:always-auth=true",
   "helm-values": {
-    "fileMatch": ["helm/*/values.yaml"]
-  }  
+    "fileMatch": [
+      "helm/*/values.yaml"
+    ]
+  }
 }
