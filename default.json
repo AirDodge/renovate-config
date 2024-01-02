@@ -148,7 +148,7 @@
       "enabled": false
     }
   ],
-  "npmrc": "@airdodge-private:registry=https://europe-west1-npm.pkg.dev/airdodge-build/npm-repository/ \n//europe-west1-npm.pkg.dev/airdodge-build/npm-repository/:always-auth=true",
+  "npmrc": "@airdodge-private:registry=https://europe-west1-npm.pkg.dev/airdodge-build/npm-repository/\n//europe-west1-npm.pkg.dev/airdodge-build/npm-repository/:always-auth=true",
   "helm-values": {
     "fileMatch": [
       "helm/*/values.yaml"
